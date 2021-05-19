@@ -15,5 +15,6 @@ float64[] polyline_lng
 float64[] polyline_lat
 float64 end_location_lng
 float64 end_location_lat
+float64 distance_remaining_in_step
 uint64 duration
-uint8 maneuver
+uint8 next_maneuver

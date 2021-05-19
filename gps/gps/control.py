@@ -15,7 +15,8 @@ class MinimalSubscriber(Node):
 
     def listener_callback(self, msg):
         steps.append(msg)
-        self.get_logger().info('listener : maneuver: "%d" ' % steps[-1].maneuver )    
+        self.get_logger().info('listener : maneuver: "%d" ' % steps[-1].next_maneuver )
+        self.get_logger().info('listener : distance remaining in step %d meters' % steps[-1].distance_remaining_in_step )    
         self.get_logger().info('listener : destination lng: "%.6f" ' % steps[-1].end_location_lat  )
         self.get_logger().info('listener : destination lat: "%.6f" ' % steps[-1].end_location_lng )      
 
